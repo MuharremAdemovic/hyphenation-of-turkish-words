@@ -1,0 +1,58 @@
+int isVowel(char)
+{
+    char word[50] = "";
+    char wordHyp[100] = "";
+    
+    for(int i = 0;50 != '\0';++i) {
+        if(word[i] =='a' || word[i] == 'e' || word[i] == 'i' || word[i] == 'o' || word[i] == 'u'){
+           strncat(wordHyp[100], word[i], i);
+           strcat(wordHyp[100], "-");
+           strncat(wordHyp[100], &word[50],  50 - i);
+        }
+        if(!(word[i+1] == 'a' || word[i+1] == 'e' || word[i+1] == 'i' || word[i+1] == 'o' || word[i+1] == 'u'){
+            if(!(word[i+2] == 'a' || word[i+2] == 'e' || word[i+2] == 'i' || word[i+2] == 'o' || word[i+2] == 'u'){
+                 if(!(word[i+3] == 'a' || word[i+3] == 'e' || word[i+3 == 'i' || word[i+3] == 'o' || word[i+3] == 'u'){ 
+               strcat(wordHyp[100], word[50], i+2);
+               strcat(wordHyp[100], "-");
+               strncat(wordHyp[100], word[50], 50-1-(i+2);
+                       }
+                       }
+                       }
+        else {
+             strcat(wordHyp[100], word[50], i+1);
+             strcat(wordHyp[100], "-");
+             strncat(wordHyp[100], word[50],50-1-(i+1);
+             }
+            goto end;
+        }
+                     
+         for(int i = 0;50 != '\0';++i){
+             if(!(word[i] == 'a' || word[i] == 'e' || word[i] == 'i' || word[i] == 'o' || word[i] == 'u')){
+                   if(!(word[i+1] == 'a' || word[i+1] == 'e' || word[i+1] == 'i' || word[i+1] == 'o' || word[i+1] == 'u')){
+                       strncat(wordHyp[100], word[50], i+1);
+                       strcat(wordHyp[100], "-");
+                       strncat(wordHyp[100], word[50], 50-1-(i+1);
+                               }
+                     else {
+                          strncat(wordHyp[100], word[50], i);
+                          strcat(wordHype[100], "-");
+                          strncat(wordHyp[100], word[50], 50-1-i);
+                     }
+                 
+     
+                     
+                     
+                     
+    end;
+        
+int main()
+{
+
+    printf("Enter a word for hyphenation:\n");
+    scanf("%s", word);
+    
+    int isVowel(char);
+
+    printf("%s\n", wordHyp);
+    return 0;
+}
